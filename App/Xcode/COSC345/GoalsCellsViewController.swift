@@ -111,13 +111,12 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             let text = alert?.textFields![0]
             listItemArray.append((text?.text)!)
             self.tblList.rowHeight = UITableViewAutomaticDimension
-            self.tblList.reloadData()
-            
-            
+            self.tblList.reloadData()   
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             self.tblList.reloadData()
+             
             
         }))
         //Present alert
