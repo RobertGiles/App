@@ -4,7 +4,7 @@ The following features of the Social Anxiety App are:
 
 Diary - To keep records of events.
 
-Goal Section - Set, Manage and Complete Goals.
+Goal Section - Set, Manage, and Complete Goals.
 
 Information Section - Finding information externally about Sociel Anxiety.
 
