@@ -115,11 +115,6 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             
             
         }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            self.tblList.reloadData()
-            
-        }))
         //Present alert
         self.present(alert, animated: true, completion: nil)
         storeData()

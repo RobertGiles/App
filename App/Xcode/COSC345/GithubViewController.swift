@@ -25,7 +25,7 @@ class GithubViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let url = URL(string: "https://github.com/RobertGiles/App")!
+        let url = URL(string: "https://github.com/EthanBrake/COSC345-App")!
         let request = URLRequest(url: url)
         webview.load(request)
     }
