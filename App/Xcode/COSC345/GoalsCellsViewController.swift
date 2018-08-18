@@ -113,6 +113,11 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             self.tblList.rowHeight = UITableViewAutomaticDimension
             self.tblList.reloadData()
             
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            self.tblList.reloadData()
+             
             
         }))
         //Present alert
