@@ -1,11 +1,3 @@
-//
-//  GoalsCellsViewController.swift
-//  COSC345
-//
-//  Created by Ethan Brake on 8/6/18.
-//  Copyright © 2018 Ethan Brake. All rights reserved.
-//
-
 import UIKit
 
 let defaultss = UserDefaults(suiteName: "345App")

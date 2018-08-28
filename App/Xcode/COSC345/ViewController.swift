@@ -1,12 +1,3 @@
-//
-//  ViewController.swift
-//  COSC345
-//
-//  Created by Ethan Brake on 3/23/18.
-//  Copyright © 2018 Ethan Brake. All rights reserved.
-// ? means it's an optional value
-// ! means it contains a value
-
 import UIKit
 
 class ViewController: UIViewController {

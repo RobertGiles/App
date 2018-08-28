@@ -1,10 +1,3 @@
-//
-//  SecondViewController.swift
-//  COSC345
-//
-//  Created by Ethan Brake on 3/23/18.
-//  Copyright © 2018 Ethan Brake. All rights reserved.
-
 import UIKit
 
 var myrowIndex = 0
@@ -51,25 +44,37 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             myTableView.reloadData()
         }
     }
+
+    func printLog(log: AnyObject?) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS "
+        print(formatter.string(from: Date()))
+        if log == nil {
+            print("nil")
+        }
+        else {
+            print(log!)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let list = listUserDefault.stringArray(forKey: "best"){
-//            list = list
-//        }
 
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.rowHeight = UITableViewAutomaticDimension
 
-        self.title = "Second"
+        self.title = "Diary"
         // Do any additional setup after loading the view.
+        
+        self.input.delegate = self as? UITextFieldDelegate
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
 

@@ -1,11 +1,3 @@
-//
-//  ForthViewController.swift
-//  COSC345
-//
-//  Created by Ethan Brake on 3/27/18.
-//  Copyright © 2018 Ethan Brake. All rights reserved.
-//
-
 import UIKit
 
 @objcMembers class ForthViewController: UIViewController, UITextFieldDelegate {

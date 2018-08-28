@@ -1,11 +1,3 @@
-//
-//  JournalViewController.swift
-//  COSC345
-//
-//  Created by Robert Giles on 8/12/18.
-//  Copyright © 2018 Ethan Brake. All rights reserved.
-//
-
 import UIKit
 
 var editDataArray: [String] = Array()
