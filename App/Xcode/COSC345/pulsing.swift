@@ -12,8 +12,8 @@ class pulsing: CALayer {
     var animationGroup = CAAnimationGroup()
     // Settings for animation
     var initialPulseScale:Float = 0.2
-    var nextPulseAfter:TimeInterval = 0
-    var animationDuration:TimeInterval = 4
+    var pauseTime:TimeInterval = 1
+    var animationDuration:TimeInterval = 3
     var radius:CGFloat = 200
     var numberOfPulses:Float = Float.infinity
     
@@ -48,11 +48,11 @@ class pulsing: CALayer {
         }
     }
     
-    func createScaleAnimation () -> CABasicAnimation {
-        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
-        scaleAnimation.fromValue = NSNumber(value: initialPulseScale)
-        scaleAnimation.toValue = NSNumber(value: 1)
-        scaleAnimation.duration = animationDuration
+    func createScaleAnimation () -> CAKeyframeAnimation {
+        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale.xy")
+        scaleAnimation.duration = 2*(animationDuration + pauseTime)
+        scaleAnimation.values = [initialPulseScale, 1, 1, initialPulseScale, initialPulseScale]
+        scaleAnimation.keyTimes = [0, animationDuration/(2*(animationDuration+pauseTime)) as NSNumber, 0.5, 0.5+(animationDuration/(2*(animationDuration+pauseTime))) as NSNumber, 1]
         
         return scaleAnimation
     }
@@ -60,21 +60,21 @@ class pulsing: CALayer {
     func createOpacityAnimation() -> CAKeyframeAnimation {
         
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
-        opacityAnimation.duration = animationDuration
-        opacityAnimation.values = [0.4, 0.8, 0]
-        opacityAnimation.keyTimes = [0, 0.2, 1]
+        opacityAnimation.duration = 2*(animationDuration + pauseTime)
+        opacityAnimation.values = [0.8, 0, 0, 0.8, 0.8]
+        opacityAnimation.keyTimes = [0, animationDuration/(2*(animationDuration+pauseTime)) as NSNumber, 0.5, 0.5+(animationDuration/(2*(animationDuration+pauseTime))) as NSNumber, 1]
         
         return opacityAnimation
     }
     
     func setupAnimationGroup() {
         self.animationGroup = CAAnimationGroup()
-        self.animationGroup.duration = animationDuration + nextPulseAfter
+        self.animationGroup.duration = 2*(animationDuration + pauseTime)
         self.animationGroup.repeatCount = numberOfPulses
-        self.animationGroup.autoreverses = true
+        self.animationGroup.autoreverses = false
         
-        let defaultCurve = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-        self.animationGroup.timingFunction = defaultCurve
+        //let defaultCurve = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+        //self.animationGroup.timingFunction = defaultCurve
         
         self.animationGroup.animations = [createScaleAnimation(), createOpacityAnimation()]
     }
