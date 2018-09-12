@@ -11,21 +11,9 @@ import UIKit
         
         self.title = "Breathing Exercise"
         
-        avatarImageView.isUserInteractionEnabled = true
-        let tapGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(ForthViewController.addPulse))
-        let stopTapGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(ForthViewController.stopAnimation))
-        
-        tapGestureRecogniser.numberOfTapsRequired = 1
-        startButton.addGestureRecognizer(tapGestureRecogniser)
-        
-        stopTapGestureRecogniser.numberOfTapsRequired = 1
-        //stopButton.addGestureRecognizer(stopTapGestureRecogniser)
+        addPulse()
 
         // Do any additional setup after loading the view.
-    }
-    
-    func stopAnimation(){ // Stop button animation code will go here.
-        
     }
     
     func addPulse(){ // Creates an animation instance
