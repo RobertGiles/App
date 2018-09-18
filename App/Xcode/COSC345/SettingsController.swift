@@ -1,27 +1,19 @@
 import UIKit
 
 class SettingsController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
     @IBOutlet weak var myImageView: UIImageView!
-    
     @IBAction func importimage(_ sender: Any)
     {
         let userimage = UIImagePickerController()
-        
         userimage.delegate = self
-        
         userimage.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        
         userimage.allowsEditing = false
-        
         self.present(userimage, animated: true)
         {
-            
+
         }
     }
-    
     @IBOutlet weak var inputButton: UIButton!
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         if let userimage = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -35,36 +27,16 @@ class SettingsController: UIViewController, UINavigationControllerDelegate, UIIm
         }
         self.dismiss(animated: true, completion: nil)
     }
-    
     @IBOutlet var backgroundView: UIImageView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Relaxing Image"
-        
         let imageThatIgetFromSomewhere = UIImage(named: "userimage") //Change this to get your newly selected image
         if let image = imageThatIgetFromSomewhere {
             backgroundView.image = image
         }
-
-        // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -35,14 +35,15 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Qjh-OA-2Jl"/>
-                                                            <constraint firstAttribute="width" constant="100" id="eL2-3L-1dC"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="eL2-3L-1dC"/>
                                                         </constraints>
+                                                        <viewLayoutGuide key="safeArea" id="HnT-PQ-kSD"/>
                                                         <state key="normal" title="Diary" image="diary"/>
                                                         <connections>
                                                             <segue destination="2X3-wV-VHU" kind="show" id="c4I-hg-2rI"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-g3-7PX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A3-g3-7PX">
                                                         <rect key="frame" x="25" y="100" width="50" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -56,7 +57,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-Op-PwR">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="IuR-7O-8j9"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="IuR-7O-8j9"/>
                                                             <constraint firstAttribute="height" constant="100" id="jMX-WN-74M"/>
                                                         </constraints>
                                                         <state key="normal" title="Goals" image="goals"/>
@@ -64,7 +65,7 @@
                                                             <segue destination="rez-4Y-btk" kind="show" id="cFJ-hq-czS"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r6-Ro-6fg">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r6-Ro-6fg">
                                                         <rect key="frame" x="23.000000000000028" y="100" width="54" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -84,14 +85,14 @@
                                                         <rect key="frame" x="5" y="0.0" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="XMs-T0-UV0"/>
-                                                            <constraint firstAttribute="width" constant="100" id="gjS-L3-5lT"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="gjS-L3-5lT"/>
                                                         </constraints>
                                                         <state key="normal" title="Information" image="info"/>
                                                         <connections>
                                                             <segue destination="N2w-7K-cDa" kind="show" id="TC6-fo-5lg"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-hy-NGu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-hy-NGu">
                                                         <rect key="frame" x="0.0" y="100" width="109.66666666666667" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -105,7 +106,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WD-7o-sRa">
                                                         <rect key="frame" x="38.333333333333343" y="0.0" width="100" height="100"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="44W-3X-WLJ"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="44W-3X-WLJ"/>
                                                             <constraint firstAttribute="height" constant="100" id="gsz-NG-jg1"/>
                                                         </constraints>
                                                         <state key="normal" title="Tool Kit" image="toolkit"/>
@@ -113,7 +114,7 @@
                                                             <segue destination="VtF-6O-fXz" kind="show" id="33t-Tj-9XH"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathing Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFf-ZC-IsO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathing Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFf-ZC-IsO">
                                                         <rect key="frame" x="0.0" y="100" width="176.33333333333334" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -132,7 +133,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yft-W9-wtX">
                                                         <rect key="frame" x="2.6666666666666643" y="0.0" width="100" height="100"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="YwA-mQ-EeC"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="YwA-mQ-EeC"/>
                                                             <constraint firstAttribute="height" constant="100" id="gzd-tK-zYX"/>
                                                         </constraints>
                                                         <state key="normal" title="Contact Us" image="contact"/>
@@ -140,7 +141,7 @@
                                                             <segue destination="Gfx-ZB-hC7" kind="show" id="QV3-Rj-OVf"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-sF-oET">
+                                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UE-sF-oET">
                                                         <rect key="frame" x="0.0" y="100" width="105.33333333333333" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -154,7 +155,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBZ-Id-HGH">
                                                         <rect key="frame" x="22" y="0.0" width="100" height="100"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="6nh-rA-Q4x"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="6nh-rA-Q4x"/>
                                                             <constraint firstAttribute="height" constant="100" id="TKD-S9-hye"/>
                                                         </constraints>
                                                         <state key="normal" title="Settings" image="settings"/>
@@ -162,7 +163,7 @@
                                                             <segue destination="WZn-D5-XNr" kind="show" id="3C9-OF-i5i"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxing Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-c4-9Pg">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relaxing Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-c4-9Pg">
                                                         <rect key="frame" x="0.0" y="100" width="144" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -355,7 +356,7 @@
                                 <rect key="frame" x="20" y="659" width="374" height="54"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.57274721746575341" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="fee-Cs-4dX"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="fee-Cs-4dX"/>
                                     <constraint firstAttribute="height" constant="54" id="mDB-h4-kL6"/>
                                 </constraints>
                                 <state key="normal" title="Add Goal">
@@ -415,6 +416,9 @@
                                 <rect key="frame" x="20" y="641" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.57274721750000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -683,7 +687,7 @@
                                                     <fragment>
                                                         <string key="content">Firstly, consider what you want to achieve, and then most importantly commit to it! In this section we will cover how to set a SMART goal. A smart goal is specific, measurable, attainable, relevant and time-bound. If you follow these steps you will be able to realize your goal and achieve it.</string>
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -700,7 +704,7 @@
                                                     <fragment>
                                                         <string key="content">Set your goals on a number of levels: First create your "big picture" of what you want to achieve with this Application, and identify the large-scale goals that you want to achieve. For example: "I would like to walk through town without feeling anxious about the people around me". You then break this down into smaller and smaller easier targets that you must hit to reach your overall life time Goal. Once you have a plan you can work on achieving these goals.</string>
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1364,18 +1368,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-0r-x8B">
-                                <rect key="frame" x="20" y="88" width="374" height="590"/>
+                                <rect key="frame" x="20" y="88" width="374" height="494"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.7536922089041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHM-WB-N8Q">
+                                <rect key="frame" x="223" y="604" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Entry Was Created:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Rt-cZ-l6H">
+                                <rect key="frame" x="20" y="604" width="213" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3Od-Zs-fqU"/>
                     </view>
                     <connections>
+                        <outlet property="fixedDate" destination="BHM-WB-N8Q" id="yLO-ZU-mcc"/>
                         <outlet property="journalLabel" destination="MeO-0r-x8B" id="mex-dA-qzW"/>
                     </connections>
                 </viewController>

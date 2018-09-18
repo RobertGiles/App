@@ -4,14 +4,10 @@ let defaultss = UserDefaults(suiteName: "345App")
 
 var listItemArray: [String] = Array()
 var myIndex = 0
-
-
 class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     
     @IBOutlet weak var addGoalButton: UIButton!
     @IBOutlet weak var tblList: UITableView!
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         getData()
@@ -21,7 +17,6 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidDisappear(true)
         storeData()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData() //Gets user data as application loads
@@ -32,17 +27,14 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
         tblList.delegate = self
         tblList.rowHeight = UITableViewAutomaticDimension
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     //Tells the data source to return the number of rows in a given section of a table view.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listItemArray.count
     }
-    
     //Asks the data source for a cell to insert in a particular location of the table view.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblList.dequeueReusableCell(withIdentifier: "addGoals") as! TableViewCellGoal
@@ -52,12 +44,10 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.numberOfLines = 0
         return cell
     }
-    
     //Asks the delegate for the height to use for a row in a specified location.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return UITableViewAutomaticDimension
     }
-  
     //When my checkmark button is selected or deselected
     @objc func checkMarkedButtonClicked( sender: UIButton){
         if sender.isSelected{
@@ -68,13 +58,11 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             sender.isSelected = true
         }
     }
-    
     //Tells the delegate that the specified row is now selected. myIndex is the current row, once clicked performs a segue to view the selected Goal
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         myIndex = indexPath.row
         performSegue(withIdentifier: "toViewGoalSegue", sender: self)
     }
-    
     //this func deletes cell rows
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == UITableViewCellEditingStyle.delete{
@@ -84,8 +72,6 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             tblList.reloadData()
         }
     }
-    
-    
     //This button called my alert
     @IBAction func newGoalPressed(_ sender: Any) {
         addTableRow()
@@ -104,10 +90,7 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             listItemArray.append((text?.text)!)
             self.tblList.rowHeight = UITableViewAutomaticDimension
             self.tblList.reloadData()
-            
-            
         }))
-        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             self.tblList.reloadData()
             
@@ -115,17 +98,13 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
         //Present alert
         self.present(alert, animated: true, completion: nil)
         storeData()
-        
     }
-    
     //storing app data
     func storeData(){
         defaultss?.set(listItemArray, forKey: "savedData")
         //self.tableView.rowHeight = UITableViewAutomaticDimension
         defaultss?.synchronize()
     }
-    
-    
     //getting app data
     func getData(){
         let data = defaultss?.value(forKey: "savedData")
@@ -135,14 +114,4 @@ class GoalsCellsViewController: UIViewController, UITableViewDataSource, UITable
             
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
