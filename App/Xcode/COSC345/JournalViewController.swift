@@ -2,6 +2,7 @@ import UIKit
 
 var editDataArray: [String] = Array()
 
+/* Class declaration for a JournalViewController that holds an individual entry in the diary*/
 class JournalViewController: UIViewController {
     @IBOutlet weak var fixedDate: UITextField!
     @IBOutlet weak var journalLabel: UILabel!

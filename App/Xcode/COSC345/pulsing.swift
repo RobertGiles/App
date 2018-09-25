@@ -21,9 +21,12 @@ class pulsing: CALayer {
     override init(layer: Any) {
         super.init(layer: layer)
     }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    // Initializes the breathing animation parameters
     init (numberOfPulses:Float = Float.infinity, radius:CGFloat, position:CGPoint) {
         super.init()
         self.backgroundColor = UIColor.red.cgColor
@@ -41,6 +44,8 @@ class pulsing: CALayer {
             }
         }
     }
+    
+    // Define how to create the scaling part of the animation for the breathing exercise.
     func createScaleAnimation () -> CAKeyframeAnimation {
         let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale.xy")
         scaleAnimation.duration = 2*(animationDuration + pauseTime)
@@ -48,8 +53,9 @@ class pulsing: CALayer {
         scaleAnimation.keyTimes = [0, animationDuration/(2*(animationDuration+pauseTime)) as NSNumber, 0.5, 0.5+(animationDuration/(2*(animationDuration+pauseTime))) as NSNumber, 1]
         return scaleAnimation
     }
+    
+    // Define how to create the opacity part of the animation for the breathing exercise.
     func createOpacityAnimation() -> CAKeyframeAnimation {
-        
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = 2*(animationDuration + pauseTime)
         opacityAnimation.values = [0.8, 0, 0, 0.8, 0.8]
@@ -57,6 +63,8 @@ class pulsing: CALayer {
         
         return opacityAnimation
     }
+    
+    // Define how to combine the animations into a functioning breathing animation guide/
     func setupAnimationGroup() {
         self.animationGroup = CAAnimationGroup()
         self.animationGroup.duration = 2*(animationDuration + pauseTime)
