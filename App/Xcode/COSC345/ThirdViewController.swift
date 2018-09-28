@@ -29,13 +29,6 @@ class ThirdViewController: UIViewController {
         self.navigationController?.pushViewController(toWhatisGoal, animated: true )
     }
     
-    // Activates the ReviewMyGoals ViewController
-    @IBAction func toReviewVC(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let toReviewGoal = storyboard.instantiateViewController(withIdentifier: "ReviewMyGoalsViewController")as!ReviewMyGoalsViewController
-        self.navigationController?.pushViewController(toReviewGoal, animated: true)
-    }
-    
     // Activates the Current Goals ViewController.
     @IBAction func CurrentGoalsVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

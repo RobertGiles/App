@@ -2,6 +2,7 @@ import UIKit
 
 class SettingsController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var myImageView: UIImageView!
+    /* Selects the image from the users phone */
     @IBAction func importimage(_ sender: Any)
     {
         let userimage = UIImagePickerController()
@@ -13,6 +14,7 @@ class SettingsController: UIViewController, UINavigationControllerDelegate, UIIm
 
         }
     }
+    /* Brings the image into a local variable */
     @IBOutlet weak var inputButton: UIButton!
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
@@ -28,10 +30,11 @@ class SettingsController: UIViewController, UINavigationControllerDelegate, UIIm
         self.dismiss(animated: true, completion: nil)
     }
     @IBOutlet var backgroundView: UIImageView!
+    /* Sets the image as a temporary background */
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Relaxing Image"
-        let imageThatIgetFromSomewhere = UIImage(named: "userimage") //Change this to get your newly selected image
+        let imageThatIgetFromSomewhere = UIImage(named: "userimage")
         if let image = imageThatIgetFromSomewhere {
             backgroundView.image = image
         }

@@ -1,8 +1,10 @@
 import UIKit
 
+/* global variable declarations */
 var myrowIndex = 0
 var list: [String] = []
 
+/* Main diary constructor */
 class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let listUserDefault = UserDefaults.standard
 
@@ -12,6 +14,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return (list.count)
     }
 
+    /* Cell table data goes into */
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell") as UITableViewCell
@@ -19,7 +22,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.numberOfLines = 0
         return(cell)
     }
-    
+    /* allocating a row to a specific entry point */
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete

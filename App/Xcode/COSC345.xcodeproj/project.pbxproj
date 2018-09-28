@@ -38,7 +38,6 @@
 		C88F2ABA206491B40039194A /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88F2AB9206491B40039194A /* FifthViewController.swift */; };
 		C8D119BF20B4A9370029739F /* WriteAGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D119BE20B4A9370029739F /* WriteAGoalViewController.swift */; };
 		C8D119C320B4AFAD0029739F /* WhatisAGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D119C220B4AFAD0029739F /* WhatisAGoalViewController.swift */; };
-		C8FDBF9020B4B19A0037C795 /* ReviewMyGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF8F20B4B19A0037C795 /* ReviewMyGoalsViewController.swift */; };
 		C8FDBF9420B4B93B0037C795 /* CurrentGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FDBF9320B4B93B0037C795 /* CurrentGoalsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +75,6 @@
 		C88F2AB9206491B40039194A /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		C8D119BE20B4A9370029739F /* WriteAGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteAGoalViewController.swift; sourceTree = "<group>"; };
 		C8D119C220B4AFAD0029739F /* WhatisAGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatisAGoalViewController.swift; sourceTree = "<group>"; };
-		C8FDBF8F20B4B19A0037C795 /* ReviewMyGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMyGoalsViewController.swift; sourceTree = "<group>"; };
 		C8FDBF9320B4B93B0037C795 /* CurrentGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGoalsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +136,6 @@
 				C830BF882092C33B00FFEAA9 /* SettingsController.swift */,
 				C8D119BE20B4A9370029739F /* WriteAGoalViewController.swift */,
 				C8D119C220B4AFAD0029739F /* WhatisAGoalViewController.swift */,
-				C8FDBF8F20B4B19A0037C795 /* ReviewMyGoalsViewController.swift */,
 				C8FDBF9320B4B93B0037C795 /* CurrentGoalsViewController.swift */,
 				C80DEFAD2117BAEA00E2604F /* TableViewCellGoal.swift */,
 				C80DEFAE2117BAEA00E2604F /* TableViewCellGoal.xib */,
@@ -244,7 +241,6 @@
 				C88F2AB4206485E30039194A /* ThirdViewController.swift in Sources */,
 				1010499521200B7C009A2330 /* JournalViewController.swift in Sources */,
 				C8D119C320B4AFAD0029739F /* WhatisAGoalViewController.swift in Sources */,
-				C8FDBF9020B4B19A0037C795 /* ReviewMyGoalsViewController.swift in Sources */,
 				B4A396E720B12661000CDC9F /* MoreInfoViewController.swift in Sources */,
 				C80DEFB22117BBA900E2604F /* GoalsCellsViewController.swift in Sources */,
 				B46CD9ED21183D6B002C21D8 /* pulsing.swift in Sources */,

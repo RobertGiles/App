@@ -10,6 +10,7 @@ class JournalViewController: UIViewController {
     @IBAction func JournalNewEntry(_ sender: AnyObject) {
         journalinput.text = ""
     }
+    /* allows for date entry to exist and is created on the day */
     override func viewDidLoad() {
         super.viewDidLoad()
         journalLabel.text = list[myrowIndex]

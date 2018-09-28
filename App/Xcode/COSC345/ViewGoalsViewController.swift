@@ -1,5 +1,6 @@
 import UIKit
 
+/* View goals main constructor */
 class ViewGoalsViewController: UIViewController {
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var myImageView: UIImageView!
